@@ -1,0 +1,62 @@
+<div>
+    <div>
+        <h1> les demandes Non traitées</h1>
+       <div>
+        <div class="table" text-align=center>
+          <tr *ngFor="let nontraite of Nontraiter">
+
+            <td class="text-left">
+              
+              <span>{{nontraite.id}}</span>
+              </td>
+            <td class="text-left">
+              
+            <span>{{nontraite.teste}}</span>
+            </td>
+            <td class="text-left">
+              
+              <span>{{nontraite.isolement}}</span>
+            </td>
+            <td class="text-left">    
+              <span>{{nontraite.maladie}}</span>
+            </td>
+            <td class="text-left"> 
+              <span>{{nontraite.symptome}}</span>
+            </td>
+            <td class="text-left"> 
+              <span>{{nontraite.temps}} /Jours</span>
+
+            </td>
+            <td class="text-right">
+              <button class="btn btn-danger" id=1 (click)="delete(nontraite)">
+                Postif
+              </button>
+               
+
+            </td>
+            <td class="text-right">
+              <button class="btn btn-danger" id=2 (click)="delete(nontraite)">
+                Négatif
+              </button>
+               
+
+            </td>
+          </tr>
+        </div>
+
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+                <a routerLink="/" class="nav-link" href="#">le tableau de bord,</a>
+              </li>
+             
+              <li class="nav-item">
+                <a routerLink="/traiter" class="nav-link" href="#">afficher l’archive des fiches déjà traitées</a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/nontraiter" class="nav-link" href="#">les demandes non traitées</a>
+              </li>
+            </ul>
+       </div>
+    </div>
+    
+ </div>
